@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <title>คำร้องขอเพิ่ม-ถอนรายวิชา</title>
+</head>
+<body>
+    <div class="container">
+        <h1>คำร้องขอเพิ่ม-ถอนรายวิชา</h1>
+        <h2>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</h2><br>
+        <form>
+            <div class="date">
+                <label for="date">วันที่:</label>
+                <input type="date" id="date" name="date" required><br><br>
+            </div>
+
+            <div class="detail">
+                <label for="detail">เรื่อง:</label>
+                <input type="text" id="detail" name="detail" >
+                <p><b>เรียน</b> คณบดีคณะวิทยาศาสตร์และเทคโนโลยี</p><br>
+                <p><b>สิ่งที่ส่งมาด้วย</b> การจดทะเบียนทุกภาคเรียนจากเว็ปไซต์สำนักทะเบียน</p><br>
+            </div>
+
+            <div class="form-section">
+                <p><b>ข้อมูลส่วนตัวของนักศึกษา</b></p>
+                <label for="title">คำนำหน้าชื่อ:</label>
+                <select id="title" name="title" required>
+                    <option value=""></option>
+                    <option value="นาย">นาย</option>
+                    <option value="นาง">นาง</option>
+                    <option value="นางสาว">นางสาว</option>
+                </select>
+
+                <label for="firstname">ชื่อ:</label>
+                <input type="text" id="firstname" name="firstname" required>
+
+                <label for="lastname">นามสกุล:</label>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+
+                <label for="student_id">เลขทะเบียน:</label>
+                <input type="text" id="student_id" name="student_id" required>
+
+                <label for="year">ชั้นปีที่:</label>
+                    <select id="year" name="year" required>
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+
+                <label for="major">สาขาวิชา:</label>
+                <select id="major" name="major" required>
+                    <option value=""></option>
+                    <option value="สถิติ">สถิติ</option>
+                    <option value="คณิตศาสตร์">คณิตศาสตร์</option>
+                    <option value="คณิตศาสตร์ประยุกต์">คณิตศาสตร์ประยุกต์</option>
+                    <option value="เคมี">เคมี</option>
+                    <option value="เทคโนโลยีการเกษตร">เทคโนโลยีการเกษตร</option>
+                    <option value="เทคโนโลยีเพื่อการพัฒนายั่งยืน">เทคโนโลยีเพื่อการพัฒนายั่งยืน</option>
+                    <option value="เทคโนโลยีชีวภาพ">เทคโนโลยีชีวภาพ</option>
+                    <option value="ฟิสิกส์อิเล็กทรอนิกส์">ฟิสิกส์อิเล็กทรอนิกส์</option>
+                    <option value="ฟิสิกส์">ฟิสิกส์</option>
+                    <option value="วัสดุศาสตร์">วัสดุศาสตร์</option>
+                    <option value="วิทยาการคอมพิวเตอร์">วิทยาการคอมพิวเตอร์</option>
+                    <option value="วิทยาศาสตร์สิ่งแวดล้อม">วิทยาศาสตร์สิ่งแวดล้อม</option>
+                    <option value="วิทยาศาสตร์และเทคโนโลยีการอาหาร">วิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+                    <option value="วิทยาศาสตร์และนวัตกรรมทางอาหาร">วิทยาศาสตร์และนวัตกรรมทางอาหาร</option>
+                    <option value="วิทยาศาสตร์และเทคโนโลยีสิ่งทอ">วิทยาศาสตร์และเทคโนโลยีสิ่งทอ</option>
+                </select><br>
+
+                <p><b>ที่อยู่ที่สามารถติดต่อได้ทางไปรษณีย์</b></p>
+
+                <label for="address">บ้านเลขที่:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="moo">หมู่ที่:</label>
+                <input type="text" id="moo" name="moo" required>
+
+                <label for="tumbol">ตำบล:</label>
+                <input type="text" id="tumbol" name="tumbol" required>
+
+                <label for="amphur">อำเภอ:</label>
+                <input type="text" id="amphur" name="amphur" required><br><br>
+
+                <label for="province">จังหวัด:</label>
+                <input type="text" id="province" name="province" required>
+
+                <label for="postcode">รหัสไปรษณีย์:</label>
+                <input type="text" id="postcode" name="postcode" pattern="[0-9]{5}" required>
+
+                <label for="mobilePhone">โทรศัพท์มือถือ:</label>
+                <input type="text" id="mobilePhone" name="mobilePhone" pattern="[0-9]{10}" required><br><br>
+
+                <label for="homePhone">โทรศัพท์บ้าน (ถ้ามี):</label>
+                <input type="text" id="homePhone" name="homePhone" pattern="[0-9]{10}"><br><br>
+
+                <label for="advisor">อาจารย์ที่ปรึกษา:</label>
+                <input type="text" id="advisor" name="advisor" required>
+            </div>
+
+            <!-- รายละเอียดวิชาที่ต้องการเพิ่มถอน 10 รายวิชา -->
+            <div class="subjects">
+                <p>มีความประสงค์ขอเพิ่ม <input type="checkbox" id="add" name="add" value="value1">
+                / ถอน <input type="checkbox" id="quit" name="quit" value="value2">
+                ดังรายการต่อไปนี้</p>
+            </div>
+            <!--ตารางรายวิชาที่ต้องการเพิ่ม-->
+            <div class="subjects">
+                <p><b>รายวิชาที่ต้องการเพิ่ม</b></p>
+                <table border="1">
+                    <colgroup>
+                        <col style="width: 50px;"> <!-- ความกว้างของ column ลำดับ -->
+                        <col style="width: 130px;"> <!-- ความกว้างของ column รหัสวิชา -->
+                        <col style="width: 200px;"> <!-- ความกว้างของ column ชื่อวิชา -->
+                        <col style="width: 130px;"> <!-- ความกว้างของ column Section -->
+                        <col style="width: 180px;"> <!-- ความกว้างของ column วัน/เวลา -->
+                        <col style="width: 100px;"> <!-- ความกว้างของ column หน่วยกิต -->
+                        <col style="width: 150px;"> <!-- ความกว้างของ column ชื่อผู้สอน -->
+                        <col style="width: 120px;"> <!-- ความกว้างของ column ผู้สอนอณุญาต -->
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>รหัสวิชา</th>
+                        <th>ชื่อวิชา</th>
+                        <th>Section</th>
+                        <th>วัน/เวลา</th>
+                        <th>หน่วยกิต</th>
+                        <th>ชื่อผู้สอน</th>
+                        <th>ผู้สอนอณุญาต</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" id="addSubjectCode1" name="addSubjectCode1"></td>
+                            <td><input type="text" id="addSubjectName1" name="addSubjectName1"></td>
+                            <td><input type="text" id="addSubjectSection1" name="addSubjectSection1"></td>
+                            <td><input type="text" id="addSubjectDate1" name="addSubjectDate1"></td>
+                            <td><input type="text" id="addSubjectCredit1" name="addSubjectCredit1"></td>
+                            <td><input type="text" id="addSubjectTeacher1" name="addSubjectTeacher1"></td>
+                            <td><select id="addSubjectTeacherCheck1" name="addSubjectTeacherCheck1">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" id="addSubjectCode2" name="addSubjectCode2"></td>
+                            <td><input type="text" id="addSubjectName2" name="addSubjectName2"></td>
+                            <td><input type="text" id="addSubjectSection2" name="addSubjectSection2"></td>
+                            <td><input type="text" id="addSubjectDate2" name="addSubjectDate2"></td>
+                            <td><input type="text" id="addSubjectCredit2" name="addSubjectCredit2"></td>
+                            <td><input type="text" id="addSubjectTeacher2" name="addSubjectTeacher2"></td>
+                            <td><select id="addSubjectTeacherCheck2" name="addSubjectTeacherCheck2">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" id="addSubjectCode3" name="addSubjectCode3"></td>
+                            <td><input type="text" id="addSubjectName3" name="addSubjectName3"></td>
+                            <td><input type="text" id="addSubjectSection3" name="addSubjectSection3"></td>
+                            <td><input type="text" id="addSubjectDate3" name="addSubjectDate3"></td>
+                            <td><input type="text" id="addSubjectCredit3" name="addSubjectCredit3"></td>
+                            <td><input type="text" id="addSubjectTeacher3" name="addSubjectTeacher3"></td>
+                            <td><select id="addSubjectTeacherCheck3" name="addSubjectTeacherCheck3">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" id="addSubjectCode4" name="addSubjectCode4"></td>
+                            <td><input type="text" id="addSubjectName4" name="addSubjectName4"></td>
+                            <td><input type="text" id="addSubjectSection4" name="addSubjectSection4"></td>
+                            <td><input type="text" id="addSubjectDate4" name="addSubjectDate4"></td>
+                            <td><input type="text" id="addSubjectCredit4" name="addSubjectCredit4"></td>
+                            <td><input type="text" id="addSubjectTeacher4" name="addSubjectTeacher4"></td>
+                            <td><select id="addSubjectTeacherCheck4" name="addSubjectTeacherCheck4">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" id="addSubjectCode5" name="addSubjectCode5"></td>
+                            <td><input type="text" id="addSubjectName5" name="addSubjectName5"></td>
+                            <td><input type="text" id="addSubjectSection5" name="addSubjectSection5"></td>
+                            <td><input type="text" id="addSubjectDate5" name="addSubjectDate5"></td>
+                            <td><input type="text" id="addSubjectCredit5" name="addSubjectCredit5"></td>
+                            <td><input type="text" id="addSubjectTeacher5" name="addSubjectTeacher5"></td>
+                            <td><select id="addSubjectTeacherCheck5" name="addSubjectTeacherCheck5">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="text" id="addSubjectCode6" name="addSubjectCode6"></td>
+                            <td><input type="text" id="addSubjectName6" name="addSubjectName6"></td>
+                            <td><input type="text" id="addSubjectSection6" name="addSubjectSection6"></td>
+                            <td><input type="text" id="addSubjectDate6" name="addSubjectDate6"></td>
+                            <td><input type="text" id="addSubjectCredit6" name="addSubjectCredit6"></td>
+                            <td><input type="text" id="addSubjectTeacher6" name="addSubjectTeacher6"></td>
+                            <td><select id="addSubjectTeacherCheck6" name="addSubjectTeacherCheck6">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="text" id="addSubjectCode7" name="addSubjectCode7"></td>
+                            <td><input type="text" id="addSubjectName7" name="addSubjectName7"></td>
+                            <td><input type="text" id="addSubjectSection7" name="addSubjectSection7"></td>
+                            <td><input type="text" id="addSubjectDate7" name="addSubjectDate7"></td>
+                            <td><input type="text" id="addSubjectCredit7" name="addSubjectCredit7"></td>
+                            <td><input type="text" id="addSubjectTeacher7" name="addSubjectTeacher7"></td>
+                            <td><select id="addSubjectTeacherCheck7" name="addSubjectTeacherCheck7">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="text" id="addSubjectCode8" name="addSubjectCode8"></td>
+                            <td><input type="text" id="addSubjectName8" name="addSubjectName8"></td>
+                            <td><input type="text" id="addSubjectSection8" name="addSubjectSection8"></td>
+                            <td><input type="text" id="addSubjectDate8" name="addSubjectDate8"></td>
+                            <td><input type="text" id="addSubjectCredit8" name="addSubjectCredit8"></td>
+                            <td><input type="text" id="addSubjectTeacher8" name="addSubjectTeacher8"></td>
+                            <td><select id="addSubjectTeacherCheck8" name="addSubjectTeacherCheck8">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>9</td>
+                            <td><input type="text" id="addSubjectCode9" name="addSubjectCode9"></td>
+                            <td><input type="text" id="addSubjectName9" name="addSubjectName9"></td>
+                            <td><input type="text" id="addSubjectSection9" name="addSubjectSection9"></td>
+                            <td><input type="text" id="addSubjectDate9" name="addSubjectDate9"></td>
+                            <td><input type="text" id="addSubjectCredit9" name="addSubjectCredit9"></td>
+                            <td><input type="text" id="addSubjectTeacher9" name="addSubjectTeacher9"></td>
+                            <td><select id="addSubjectTeacherCheck9" name="addSubjectTeacherCheck9">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input type="text" id="addSubjectCode10" name="addSubjectCode10"></td>
+                            <td><input type="text" id="addSubjectName10" name="addSubjectName10"></td>
+                            <td><input type="text" id="addSubjectSection10" name="addSubjectSection10"></td>
+                            <td><input type="text" id="addSubjectDate10" name="addSubjectDate10"></td>
+                            <td><input type="text" id="addSubjectCredit10" name="addSubjectCredit10"></td>
+                            <td><input type="text" id="addSubjectTeacher10" name="addSubjectTeacher10"></td>
+                            <td><select id="addSubjectTeacherCheck10" name="addSubjectTeacherCheck10">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--รายวิชาที่ต้องการถอน-->
+            <div class="subjects">
+                <p><b>รายวิชาที่ต้องการถอน</b></p>
+                <table border="1">
+                    <colgroup>
+                        <col style="width: 50px;"> <!-- ความกว้างของ column ลำดับ -->
+                        <col style="width: 130px;"> <!-- ความกว้างของ column รหัสวิชา -->
+                        <col style="width: 200px;"> <!-- ความกว้างของ column ชื่อวิชา -->
+                        <col style="width: 130px;"> <!-- ความกว้างของ column Section -->
+                        <col style="width: 180px;"> <!-- ความกว้างของ column วัน/เวลา -->
+                        <col style="width: 100px;"> <!-- ความกว้างของ column หน่วยกิต -->
+                        <col style="width: 150px;"> <!-- ความกว้างของ column ชื่อผู้สอน -->
+                        <col style="width: 120px;"> <!-- ความกว้างของ column ผู้สอนอณุญาต -->
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>รหัสวิชา</th>
+                        <th>ชื่อวิชา</th>
+                        <th>Section</th>
+                        <th>วัน/เวลา</th>
+                        <th>หน่วยกิต</th>
+                        <th>ชื่อผู้สอน</th>
+                        <th>ผู้สอนอณุญาต</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" id="dropSubjectCode1" name="dropSubjectCode1"></td>
+                            <td><input type="text" id="dropSubjectName1" name="dropSubjectName1"></td>
+                            <td><input type="text" id="dropSubjectSection1" name="dropSubjectSection1"></td>
+                            <td><input type="text" id="dropSubjectDate1" name="dropSubjectDate1"></td>
+                            <td><input type="text" id="dropSubjectCredit1" name="dropSubjectCredit1"></td>
+                            <td><input type="text" id="dropSubjectTeacher1" name="dropSubjectTeacher1"></td>
+                            <td><select id="dropSubjectTeacherCheck1" name="dropSubjectTeacherCheck1">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="text" id="dropSubjectCode2" name="dropSubjectCode2"></td>
+                            <td><input type="text" id="dropSubjectName2" name="dropSubjectName2"></td>
+                            <td><input type="text" id="dropSubjectSection2" name="dropSubjectSection2"></td>
+                            <td><input type="text" id="dropSubjectDate2" name="dropSubjectDate2"></td>
+                            <td><input type="text" id="dropSubjectCredit2" name="dropSubjectCredit2"></td>
+                            <td><input type="text" id="dropSubjectTeacher2" name="dropSubjectTeacher2"></td>
+                            <td><select id="dropSubjectTeacherCheck2" name="dropSubjectTeacherCheck2">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="text" id="dropSubjectCode3" name="dropSubjectCode3"></td>
+                            <td><input type="text" id="dropSubjectName3" name="dropSubjectName3"></td>
+                            <td><input type="text" id="dropSubjectSection3" name="dropSubjectSection3"></td>
+                            <td><input type="text" id="dropSubjectDate3" name="dropSubjectDate3"></td>
+                            <td><input type="text" id="dropSubjectCredit3" name="dropSubjectCredit3"></td>
+                            <td><input type="text" id="dropSubjectTeacher3" name="dropSubjectTeacher3"></td>
+                            <td><select id="dropSubjectTeacherCheck3" name="dropSubjectTeacherCheck3">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="text" id="dropSubjectCode4" name="dropSubjectCode4"></td>
+                            <td><input type="text" id="dropSubjectName4" name="dropSubjectName4"></td>
+                            <td><input type="text" id="dropSubjectSection4" name="dropSubjectSection4"></td>
+                            <td><input type="text" id="dropSubjectDate4" name="dropSubjectDate4"></td>
+                            <td><input type="text" id="dropSubjectCredit4" name="dropSubjectCredit4"></td>
+                            <td><input type="text" id="dropSubjectTeacher4" name="dropSubjectTeacher4"></td>
+                            <td><select id="dropSubjectTeacherCheck4" name="dropSubjectTeacherCheck4">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="text" id="dropSubjectCode5" name="dropSubjectCode5"></td>
+                            <td><input type="text" id="dropSubjectName5" name="dropSubjectName5"></td>
+                            <td><input type="text" id="dropSubjectSection5" name="dropSubjectSection5"></td>
+                            <td><input type="text" id="dropSubjectDate5" name="dropSubjectDate5"></td>
+                            <td><input type="text" id="dropSubjectCredit5" name="dropSubjectCredit5"></td>
+                            <td><input type="text" id="dropSubjectTeacher5" name="dropSubjectTeacher5"></td>
+                            <td><select id="dropSubjectTeacherCheck5" name="dropSubjectTeacherCheck5">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>6</td>
+                            <td><input type="text" id="dropSubjectCode6" name="dropSubjectCode6"></td>
+                            <td><input type="text" id="dropSubjectName6" name="dropSubjectName6"></td>
+                            <td><input type="text" id="dropSubjectSection6" name="dropSubjectSection6"></td>
+                            <td><input type="text" id="dropSubjectDate6" name="dropSubjectDate6"></td>
+                            <td><input type="text" id="dropSubjectCredit6" name="dropSubjectCredit6"></td>
+                            <td><input type="text" id="dropSubjectTeacher6" name="dropSubjectTeacher6"></td>
+                            <td><select id="dropSubjectTeacherCheck6" name="dropSubjectTeacherCheck6">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>7</td>
+                            <td><input type="text" id="dropSubjectCode7" name="dropSubjectCode7"></td>
+                            <td><input type="text" id="dropSubjectName7" name="dropSubjectName7"></td>
+                            <td><input type="text" id="dropSubjectSection7" name="dropSubjectSection7"></td>
+                            <td><input type="text" id="dropSubjectDate7" name="dropSubjectDate7"></td>
+                            <td><input type="text" id="dropSubjectCredit7" name="dropSubjectCredit7"></td>
+                            <td><input type="text" id="dropSubjectTeacher7" name="dropSubjectTeacher7"></td>
+                            <td><select id="dropSubjectTeacherCheck7" name="dropSubjectTeacherCheck7">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input type="text" id="dropSubjectCode8" name="dropSubjectCode8"></td>
+                            <td><input type="text" id="dropSubjectName8" name="dropSubjectName8"></td>
+                            <td><input type="text" id="dropSubjectSection8" name="dropSubjectSection8"></td>
+                            <td><input type="text" id="dropSubjectDate8" name="dropSubjectDate8"></td>
+                            <td><input type="text" id="dropSubjectCredit8" name="dropSubjectCredit8"></td>
+                            <td><input type="text" id="dropSubjectTeacher8" name="dropSubjectTeacher8"></td>
+                            <td><select id="dropSubjectTeacherCheck8" name="dropSubjectTeacherCheck8">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        <tr>
+                            <td>9</td>
+                            <td><input type="text" id="dropSubjectCode9" name="dropSubjectCode9"></td>
+                            <td><input type="text" id="dropSubjectName9" name="dropSubjectName9"></td>
+                            <td><input type="text" id="dropSubjectSection9" name="dropSubjectSection9"></td>
+                            <td><input type="text" id="dropSubjectDate9" name="dropSubjectDate9"></td>
+                            <td><input type="text" id="dropSubjectCredit9" name="dropSubjectCredit9"></td>
+                            <td><input type="text" id="dropSubjectTeacher9" name="dropSubjectTeacher9"></td>
+                            <td><select id="dropSubjectTeacherCheck9" name="dropSubjectTeacherCheck9">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input type="text" id="dropSubjectCode10" name="dropSubjectCode10"></td>
+                            <td><input type="text" id="dropSubjectName10" name="dropSubjectName10"></td>
+                            <td><input type="text" id="dropSubjectSection10" name="dropSubjectSection10"></td>
+                            <td><input type="text" id="dropSubjectDate10" name="dropSubjectDate10"></td>
+                            <td><input type="text" id="dropSubjectCredit10" name="dropSubjectCredit10"></td>
+                            <td><input type="text" id="dropSubjectTeacher10" name="dropSubjectTeacher10"></td>
+                            <td><select id="dropSubjectTeacherCheck10" name="dropSubjectTeacherCheck10">
+                                <option value=""></option>
+                                <option value="">ผ่าน</option>
+                                <option value="นาย">ไม่ผ่าน</option>
+                                </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="reason">
+                <p>เหตุผลที่ขอเพิ่ม <input type="checkbox" id="add2" name="add2" value="value3">
+                / ถอน <input type="checkbox" id="quit2" name="quit2" value="value4"></p>
+
+                <label for="reason">เพราะ</label>
+                <textarea id="reason" name="reason" rows="2" cols="100" required></textarea>
+            </div>
+            <div class="submit_button">
+                <input type="submit" value="submit">
+            </div>
+            
+
+
+        </form>
+    </div>
+</body>
+</html>
