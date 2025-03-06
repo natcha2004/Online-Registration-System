@@ -1,0 +1,42 @@
+
+  body {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    background-color: rgba(158, 154, 154, 0.453);
+    border: 1.5px solid #f81a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.515);
+    padding: 20px;
+    width: 390px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 210px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.img{
+    margin-top: 20px;
+  }
+ 
+  .Try{
+    background-color: rgb(232, 61, 35);
+    padding: 8px 45px;
+    font-size: 16px;
+    color: aliceblue;
+    font-family: 'PT Sans', sans-serif;
+    margin-right: 30px;
+  }
+ 
+button{
+    cursor: pointer;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border: none;
+    color: rgb(32, 30, 30);
+    display: inline-block;
+    border-radius: 20px;
+  }
+

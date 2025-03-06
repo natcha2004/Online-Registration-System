@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/InputProfessorFreeTime.css">
+    <title>FreeTime</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <!-- แถบข้อมูล -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <div>
+            <img src="img/freeTime.png" alt = "head" width="20" height="20" class="head">
+            <a href="#">Fill In</a>
+        </div>
+    </div>
+
+    <!-- เนื้อหาหลัก -->
+    <div class="content">
+        <h1 id="h1">Fill In</h1>
+        <label id="label">Please fill in your 'free' time to make your appointment.</label>
+
+    <form id="form" method="post" action="/api/freetimes">
+
+        <div class="date">
+            <label for="FirstName">Firstname </label>
+            <input class = "form-control" id="FirstName" name="FirstName" required>
+
+            <label for="LastName">Lastname </label>
+            <input class = "form-control" id="LastName" name="LastName" required>
+        </div>
+        <div class="date">
+            <label for="Date" id="dateText">Date </label>
+            <input type="date" class = "form-control" id="Date" required>
+
+            <!--
+            <label for="month">Month </label>
+            <select id="month" name="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <label for="year">Year </label>
+            <input type="text" id="year" name="year" required>
+            -->
+
+            <div class="startTime">
+                <label for="StartTime">Start Time </label>
+                <input id="StartTime" name="StartTime" required>
+
+                <label for="start_AmPm"> </label>
+                <select id="start_AmPm" name="start_AmPm">
+                    <option value="A.M.">A.M.</option>
+                    <option value="P.M.">P.M.</option>
+                </select>
+            </div>
+
+            <div class="endTime">
+                <label for="EndTime">End Time </label>
+                <input id="EndTime" name="EndTime" required>
+
+                <label for="end_AmPm"> </label>
+                <select id="end_AmPm" name="end_AmPm">
+                    <option value="A.M.">A.M.</option>
+                    <option value="P.M.">P.M.</option>
+                </select>
+            </div>
+        </div>
+        <div class ="annotation">
+            <label for = "Annotation" id="annotationText">Annotation (if any) </label>
+            <input type = "text" id = "Annotation" name = "Annotation">
+        </div>
+        <button type="submit" class="submit">submit</button>
+    </form>
+    </div>
+</div>
+<script>
+    document.getElementById("form").addEventListener("submit", function (event){
+        event.preventDefault();
+        var Date = document.getElementById("Date").value;
+        var FirstName = document.getElementById("FirstName").value;
+        var LastName = document.getElementById("LastName").value;
+        var StartTime = document.getElementById("StartTime").value;
+        var startAmPm = document.getElementById('start_AmPm').value;
+        var EndTime = document.getElementById("EndTime").value;
+        var endAmPm = document.getElementById('end_AmPm').value;
+        var Annotation = document.getElementById("Annotation").value;
+        StartTime += startAmPm;
+        EndTime += endAmPm;
+
+        var data = {
+            date: Date,
+            firstName: FirstName,
+            lastName: LastName,
+            
+            startTime: StartTime,
+            
+            endTime: EndTime,
+            //EndAmPm: endAmPm,
+            annotation: Annotation
+        };
+
+        fetch('http://localhost:8080/api/freetimes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                // การส่งข้อมูลสำเร็จ
+                document.getElementById("form").reset();
+                console.log('Data sent successfully');
+                // สามารถทำการ redirect หรือแจ้งผู้ใช้ได้ตามความเหมาะสม
+            } else {
+                // เกิดข้อผิดพลาดในการส่งข้อมูล
+                console.error('Failed to send data');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+
+    });
+    //function submitForm() {
+        
+    //}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  background-image: url('../img/backgr.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/*Requests forms*/
+h1 {
+  font-size: 45px;
+  margin-top: 30px;
+  color: rgb(255, 255, 255);
+}
+
+/*Science & Technology Thammasat University*/
+label1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  
+}
+
+/*รูป user สีเหลือง*/
+.head {
+  margin-top: -2px;
+}
+
+/*Sign in*/
+label2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgba(40, 36, 36, 0.551)
+}
+
+/*กรอบ form*/
+form {
+  background-color: #bcafaf7e;
+  border: 1px solid #b87a7a;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+/* ตกแต่งข้อความ "Placeholder" */
+::placeholder {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #877e7e;
+
+}
+
+/*ปุ่ม submit*/
+.submit {
+  background-color: rgba(229, 76, 0, 0.792);
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*ตำแหน่งของตาปิดเปิดซ่อน password*/
+.password {
+  position: relative;
+}
+
+/*กรอบให้ใส่รหัส*/
+.password-input,
+.user-input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.user-input{
+  margin-top: 20px;
+}
+
+/*รูปตาซ่อน password*/
+.eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+

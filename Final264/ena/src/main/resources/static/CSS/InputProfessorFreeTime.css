@@ -1,0 +1,163 @@
+html {
+    font-family: 'PT Sans', sans-serif;
+    padding: 0px;
+}
+
+body {
+    background-image: url('../img/backg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+}
+.content{
+    color: rgba(255, 255, 255);
+    text-align: center;
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    --webkit-backdrop-filter: blur(17px);
+    transition: width 0.3s ease;
+
+}
+
+.sidebar {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    width: 200px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(229, 76, 0, 0.4);
+    backdrop-filter: blur(17px);
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+.freeTimePic{
+       position: relative;
+       width: 110.66px;
+       height: 110.33px;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+#a {
+      text-decoration: none;
+      color: rgba(255, 255, 255);
+}
+
+#h1 {
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+#label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 150px;
+    height: 8px;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #FFB74D; /* Lighter orange border color */
+    border-radius: 5px;
+}
+.form-name {
+    width: 150px;
+    height: 8px;
+    padding: 10px;
+    margin: 30px 0 20px 0;
+    border: 1px solid #FFB74D; /* Lighter orange border color */
+    border-radius: 5px;
+}
+#dateText {
+    font-size: 20px;
+}
+
+#firstnameText{
+  font-size: 20px;
+}
+
+#lastnameText{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.startTime {
+    font-size: 20px;
+}
+
+.endTime {
+    font-size: 20px;
+}
+
+#annotationText {
+    font-size: 20px;
+}
+
+#start,
+#end {
+    width: 120px;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #FFB74D; /* Lighter orange border color */
+    border-radius: 5px;
+}
+
+#start_AmPm,
+#end_AmPm {
+    width: 70px;
+    padding: 8px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #FFB74D; /* Lighter orange border color */
+    border-radius: 5px;
+}
+
+#annotation {
+    width: 450px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #FFB74D; /* Lighter orange border color */
+    border-radius: 5px;
+}
+
+.submit {
+  background-color: rgba(229, 76, 0, 0.792);
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 50px
+}

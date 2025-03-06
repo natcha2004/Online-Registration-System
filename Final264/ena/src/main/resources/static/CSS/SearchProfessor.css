@@ -1,0 +1,137 @@
+html
+{
+     font-family: 'PT Sans', sans-serif;
+     padding: 0px;
+     
+}
+body{
+    background-image: url('../img/backg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.page,.searchBox{
+    color: rgba(255, 255, 255);
+    text-align: center;
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    --webkit-backdrop-filter: blur(17px);
+    transition: width 0.3s ease;
+
+}
+
+/* รูป icon ตารางเวลา กับ Search For Schedule และคำจำกัดความ */
+.head
+{
+   text-align: center;
+   font-family: 'PT Sans', sans-serif;
+   font-weight: 300;
+   padding: 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* รูป icon ตารางเวลา */
+.timetablePic
+{
+    position: relative;
+    width: 170.66px;
+    height: 170.33px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Search For Schedule */
+h1
+{
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+/* คำจำกัดความ */
+label
+{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+/* ตัวกล่องรับ input ชื่ออาจารย์ */
+.name-input
+{
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+/* ผลจากการค้นหา */
+.searchResults
+{
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ผลจากการค้นหา2 */
+.searchResults
+{
+   font-weight: bold;
+   font-size: 20px;
+   color: #ffffffe0;
+}
+
+.container {
+    display: flex;
+}
+
+a {
+      text-decoration: none;
+      color: rgba(255, 255, 255);
+}
+
+.sidebar {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    width: 200px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(229, 76, 0, 0.4);
+    backdrop-filter: blur(17px);
+    --webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+    color: rgb(255, 255, 255);
+}
+
+.sidebar h2 {
+    color: rgb(255, 255, 255);
+}
+.submit {
+background-color: rgba(220, 143, 104, 0.792);
+font-size: 14px;
+ font-weight: bold;
+color: #000000;
+border: none;
+padding: 4px 7px;
+border-radius: 2px;
+cursor: pointer;
+}
+
